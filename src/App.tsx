@@ -14,6 +14,12 @@ type DayEntry = {
 
 type HIITLevel = "easy" | "hard";
 
+type VegProteinSource = {
+  food: string;
+  dailyWeight: string;
+  protein: string;
+};
+
 const DAY_CARDS: DayEntry[] = [
   { day: "Sunday", slug: "sunday", muscleGroup: "Rest" },
   {
@@ -47,6 +53,17 @@ const DAY_CARDS: DayEntry[] = [
     muscleGroupKey: "arms",
   },
   { day: "Saturday", slug: "saturday", muscleGroup: "Active Recovery" },
+];
+
+const VEG_PROTEIN_SOURCES: VegProteinSource[] = [
+  { food: "Soya Chunks", dailyWeight: "50 g (dry)", protein: "26 g" },
+  { food: "Paneer", dailyWeight: "100 g", protein: "18 g" },
+  { food: "Tofu", dailyWeight: "150 g", protein: "18 g" },
+  { food: "Moong Dal", dailyWeight: "60 g (raw)", protein: "14 g" },
+  { food: "Chickpeas (Chana)", dailyWeight: "80 g (raw)", protein: "15 g" },
+  { food: "Peanuts", dailyWeight: "30 g", protein: "8 g" },
+  { food: "Milk", dailyWeight: "500 ml", protein: "16 g" },
+  { food: "Curd (Dahi)", dailyWeight: "250 g", protein: "10 g" },
 ];
 
 const getRoute = () => window.location.pathname.toLowerCase();
@@ -137,11 +154,15 @@ function HIITPage({ onNavigate }: { onNavigate: (path: string) => void }) {
 
   const selectedWorkout = useMemo<Workout | null>(() => {
     if (selectedLevel === "easy") {
-      return hiitExercises.all.find((item) => item.id === "hiit-10-beginner") ?? null;
+      return (
+        hiitExercises.all.find((item) => item.id === "hiit-10-beginner") ?? null
+      );
     }
 
     if (selectedLevel === "hard") {
-      return hiitExercises.all.find((item) => item.id === "hiit-20-advanced") ?? null;
+      return (
+        hiitExercises.all.find((item) => item.id === "hiit-20-advanced") ?? null
+      );
     }
 
     return null;
@@ -197,6 +218,75 @@ function HIITPage({ onNavigate }: { onNavigate: (path: string) => void }) {
   );
 }
 
+function FoodGuidePage({ onNavigate }: { onNavigate: (path: string) => void }) {
+  return (
+    <main className="app-main">
+      <div className="day-page-header">
+        <button
+          type="button"
+          className="back-home-button"
+          onClick={() => onNavigate("/")}
+        >
+          Back to Home
+        </button>
+      </div>
+
+      <section className="food-guide-card">
+        <h2 className="home-title">Food Guide</h2>
+        <p className="home-subtitle">
+          Target daily split: 50% protein, 20% carbs, 20% fibre, 10% fats.
+        </p>
+
+        <div className="diet-chart-layout">
+          <div className="diet-pie-chart" aria-label="Diet distribution pie chart" />
+          <div className="diet-legend">
+            <div className="diet-legend-item">
+              <span className="legend-dot legend-protein" /> Protein - 50%
+            </div>
+            <div className="diet-legend-item">
+              <span className="legend-dot legend-carbs" /> Carbs - 20%
+            </div>
+            <div className="diet-legend-item">
+              <span className="legend-dot legend-fibre" /> Fibre - 20%
+            </div>
+            <div className="diet-legend-item">
+              <span className="legend-dot legend-fats" /> Fats - 10%
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="food-guide-card">
+        <h3 className="food-table-title">Vegetarian Protein Sources (India)</h3>
+        <p className="food-table-subtitle">
+          Approximate protein values for suggested daily consumption.
+        </p>
+
+        <div className="food-table-wrap">
+          <table className="food-table">
+            <thead>
+              <tr>
+                <th>Food</th>
+                <th>Daily Consumption</th>
+                <th>Protein</th>
+              </tr>
+            </thead>
+            <tbody>
+              {VEG_PROTEIN_SOURCES.map((item) => (
+                <tr key={item.food}>
+                  <td>{item.food}</td>
+                  <td>{item.dailyWeight}</td>
+                  <td>{item.protein}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  );
+}
+
 function App() {
   const [route, setRoute] = useState(getRoute());
 
@@ -231,10 +321,11 @@ function App() {
 
       {route === "/" && <HomePage onNavigate={navigate} />}
       {route === "/hiit" && <HIITPage onNavigate={navigate} />}
-      {selectedDay && route !== "/" && route !== "/hiit" && (
+      {route === "/food-guide" && <FoodGuidePage onNavigate={navigate} />}
+      {selectedDay && route !== "/" && route !== "/hiit" && route !== "/food-guide" && (
         <DayPage selectedDay={selectedDay} onNavigate={navigate} />
       )}
-      {!selectedDay && route !== "/" && route !== "/hiit" && (
+      {!selectedDay && route !== "/" && route !== "/hiit" && route !== "/food-guide" && (
         <main className="app-main">
           <section className="rest-day-message">
             <h2>Page not found</h2>
@@ -249,6 +340,14 @@ function App() {
           </section>
         </main>
       )}
+
+      <button
+        type="button"
+        className={`floating-food-guide ${route === "/food-guide" ? "floating-food-guide-active" : ""}`}
+        onClick={() => navigate("/food-guide")}
+      >
+        Food Guide
+      </button>
     </div>
   );
 }
