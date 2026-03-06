@@ -41,7 +41,7 @@
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
   color: white;
   padding: 20px;
   border-radius: 12px;
@@ -81,7 +81,7 @@
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #51cf66 0%, #37b24d 100%);
+  background: linear-gradient(90deg, #f472b6 0%, #ec4899 100%);
   transition: width 0.3s ease;
   border-radius: 4px;
 }
@@ -120,7 +120,7 @@
 
 /* Completion Message */
 .completion-message {
-  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
   color: white;
   padding: 32px;
   border-radius: 12px;
@@ -196,3 +196,4 @@
     font-size: 20px;
   }
 }
+

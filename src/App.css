@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #1748a6;
-  --primary-dark: #0f2f70;
-  --accent: #ef4444;
-  --text-primary: #172033;
-  --text-secondary: #4f5c79;
-  --bg-light: #edf2fb;
+  --primary-color: #ec4899;
+  --primary-dark: #be185d;
+  --accent: #ec4899;
+  --text-primary: #3f1730;
+  --text-secondary: #7b3b61;
+  --bg-light: #fdf2f8;
   --card-bg: #ffffff;
-  --border-color: #d8e0f0;
+  --border-color: #f9a8d4;
   --shadow-sm: 0 6px 20px rgba(16, 34, 76, 0.08);
   --shadow-md: 0 10px 30px rgba(16, 34, 76, 0.16);
 }
@@ -24,7 +24,7 @@ body,
 }
 
 body {
-  background: radial-gradient(circle at top right, #dce8ff 0%, #edf2fb 40%, #f6f8ff 100%);
+  background: radial-gradient(circle at top right, #dce8ff 0%, #fdf2f8 40%, #f6f8ff 100%);
   color: var(--text-primary);
   font-family: "Segoe UI", "Inter", sans-serif;
 }
@@ -96,7 +96,7 @@ body {
 .day-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  border-color: #aabce7;
+  border-color: #f472b6;
 }
 
 .day-card-active {
@@ -120,10 +120,10 @@ body {
 }
 
 .back-home-button {
-  border: 1px solid #b4c1e6;
+  border: 1px solid #f9a8d4;
   border-radius: 10px;
   background: #ffffff;
-  color: #1d2d55;
+  color: #831843;
   font-size: 14px;
   font-weight: 600;
   padding: 10px 14px;
@@ -169,7 +169,7 @@ body {
   width: 100%;
   border: 1px solid #b9c7eb;
   border-radius: 14px;
-  background: linear-gradient(135deg, #0f2f70 0%, #1c54bc 100%);
+  background: linear-gradient(135deg, #be185d 0%, #db2777 100%);
   color: #ffffff;
   text-align: left;
   padding: 18px;
@@ -212,7 +212,7 @@ body {
 }
 
 .hiit-option-active {
-  border-color: #ef4444;
+  border-color: #ec4899;
   background: linear-gradient(135deg, #fff 0%, #fff1f1 100%);
 }
 
@@ -238,7 +238,7 @@ body {
   height: 92px;
   border-radius: 999px;
   border: none;
-  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
@@ -248,7 +248,7 @@ body {
 }
 
 .floating-food-guide-active {
-  background: linear-gradient(135deg, #0f766e 0%, #0e5e57 100%);
+  background: linear-gradient(135deg, #db2777 0%, #9d174d 100%);
 }
 
 .food-guide-card {
@@ -273,10 +273,10 @@ body {
   height: 180px;
   border-radius: 50%;
   background: conic-gradient(
-    #22c55e 0deg 180deg,
-    #3b82f6 180deg 252deg,
-    #f59e0b 252deg 324deg,
-    #ef4444 324deg 360deg
+    #f472b6 0deg 180deg,
+    #ec4899 180deg 252deg,
+    #f9a8d4 252deg 324deg,
+    #ec4899 324deg 360deg
   );
   border: 6px solid #f3f6ff;
   box-shadow: inset 0 0 0 1px rgba(20, 40, 82, 0.06);
@@ -303,19 +303,19 @@ body {
 }
 
 .legend-protein {
-  background: #22c55e;
+  background: #f472b6;
 }
 
 .legend-carbs {
-  background: #3b82f6;
+  background: #ec4899;
 }
 
 .legend-fibre {
-  background: #f59e0b;
+  background: #f9a8d4;
 }
 
 .legend-fats {
-  background: #ef4444;
+  background: #ec4899;
 }
 
 .food-table-title {
@@ -342,15 +342,15 @@ body {
 .food-table td {
   text-align: left;
   padding: 12px;
-  border-bottom: 1px solid #e6ecfa;
+  border-bottom: 1px solid #fbcfe8;
 }
 
 .food-table th {
   font-size: 13px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
-  color: #3f4f73;
-  background: #f7f9ff;
+  color: #831843;
+  background: #fdf2f8;
 }
 
 .food-table td {
@@ -375,3 +375,4 @@ body {
     width: 100%;
   }
 }
+

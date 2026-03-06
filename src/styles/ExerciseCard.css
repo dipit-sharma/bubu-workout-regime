@@ -14,7 +14,7 @@
 }
 
 .exercise-card.completed {
-  border-left-color: #51cf66;
+  border-left-color: #f472b6;
   background: linear-gradient(
     135deg,
     rgba(81, 207, 102, 0.05) 0%,
@@ -36,8 +36,8 @@
 
 .exercise-counter {
   display: inline-block;
-  background: #e8e8ff;
-  color: #4c6ef5;
+  background: #fce7f3;
+  color: #db2777;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 12px;
@@ -59,7 +59,7 @@
 }
 
 .completed-badge {
-  background: #51cf66;
+  background: #f472b6;
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -119,24 +119,24 @@
 }
 
 .difficulty-beginner {
-  background: #d3f9d8;
-  color: #2b8a3e;
+  background: #fce7f3;
+  color: #be185d;
   padding: 4px 12px;
   border-radius: 6px;
   font-size: 12px;
 }
 
 .difficulty-intermediate {
-  background: #fff3bf;
-  color: #855f00;
+  background: #fbcfe8;
+  color: #9d174d;
   padding: 4px 12px;
   border-radius: 6px;
   font-size: 12px;
 }
 
 .difficulty-advanced {
-  background: #ffe0e6;
-  color: #c92a2a;
+  background: #fbcfe8;
+  color: #9d174d;
   padding: 4px 12px;
   border-radius: 6px;
   font-size: 12px;
@@ -246,7 +246,7 @@
 .timer-label {
   font-size: 13px;
   font-weight: 600;
-  color: #44507a;
+  color: #9d174d;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
@@ -254,13 +254,13 @@
 .timer-value {
   font-size: 18px;
   font-weight: 700;
-  color: #1f2a55;
+  color: #831843;
 }
 
 .timer-progress-track {
   width: 100%;
   height: 8px;
-  background: #e6ecff;
+  background: #fce7f3;
   border-radius: 999px;
   overflow: hidden;
 }
@@ -279,7 +279,7 @@
 
 .timer-button {
   border: none;
-  background: #2f4cc8;
+  background: #db2777;
   color: #fff;
   border-radius: 8px;
   padding: 8px 12px;
@@ -294,7 +294,8 @@
 }
 
 .timer-button-secondary {
-  background: #eef2ff;
-  color: #33406c;
-  border: 1px solid #c9d5ff;
+  background: #fdf2f8;
+  color: #831843;
+  border: 1px solid #f9a8d4;
 }
+

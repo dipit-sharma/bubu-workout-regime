@@ -55,14 +55,14 @@
 }
 
 .duration-button:hover:not(:disabled) {
-  border-color: #667eea;
+  border-color: #ec4899;
   background: #f0f4ff;
   transform: translateY(-2px);
 }
 
 .duration-button.selected {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #ec4899;
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
   color: white;
 }
 
@@ -110,15 +110,15 @@
 }
 
 .difficulty-card:hover {
-  border-color: #667eea;
+  border-color: #ec4899;
   background: #f9f9ff;
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
 }
 
 .difficulty-card.selected {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #ec4899;
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
   color: white;
 }
 
@@ -174,7 +174,7 @@
 
 .selection-summary {
   padding: 24px;
-  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
   color: white;
   border-radius: 12px;
   animation: slideUp 0.4s ease;
@@ -251,3 +251,4 @@
     font-size: 32px;
   }
 }
+
