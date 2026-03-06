@@ -3,7 +3,7 @@ import "./App.css";
 import WorkoutDisplay from "./components/WorkoutDisplay";
 import { broSplitExercises } from "./data/broSplitExercises";
 import { hiitExercises } from "./data/hiitExercises";
-import type { MuscleGroup, Workout } from "./types/workoutTypes";
+import type { Exercise, MuscleGroup, Workout } from "./types/workoutTypes";
 
 type DayName = keyof typeof broSplitExercises.schedule;
 
@@ -70,6 +70,41 @@ const VEG_PROTEIN_SOURCES: VegProteinSource[] = [
 
 const getRoute = () => window.location.pathname.toLowerCase();
 
+function getDayOfYear(date: Date): number {
+  const startOfYear = new Date(date.getFullYear(), 0, 0);
+  const diff = date.getTime() - startOfYear.getTime();
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
+}
+
+function getDailyMixedWorkout(date: Date): Workout {
+  const dayOfYear = getDayOfYear(date);
+  const pools: Array<{ key: MuscleGroup; list: Exercise[] }> = [
+    { key: "chest", list: broSplitExercises.chest },
+    { key: "back", list: broSplitExercises.back },
+    { key: "shoulders", list: broSplitExercises.shoulders },
+    { key: "legs", list: broSplitExercises.legs },
+    { key: "arms", list: broSplitExercises.arms },
+  ];
+
+  const selectedExercises = pools.map((pool, offset) => {
+    const idx = (dayOfYear + offset) % pool.list.length;
+    return pool.list[idx];
+  });
+
+  const totalDuration = selectedExercises.reduce(
+    (sum, exercise) => sum + exercise.duration,
+    0,
+  );
+
+  return {
+    id: `mixed-${date.toISOString().split("T")[0]}`,
+    name: "Mixed Exercises",
+    type: "bro-split",
+    exercises: selectedExercises,
+    totalDuration,
+  };
+}
+
 function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
   const todayIndex = new Date().getDay();
 
@@ -80,6 +115,19 @@ function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
         <p className="home-subtitle">
           Pick a day to see all exercises for that workout.
         </p>
+      </section>
+
+      <section className="home-top-card" aria-label="Mixed exercises">
+        <button
+          type="button"
+          className="mixed-home-card"
+          onClick={() => onNavigate("/mixed-exercises")}
+        >
+          <span className="mixed-home-title">Mixed Exercises</span>
+          <span className="mixed-home-subtitle">
+            Daily rotating mix: one exercise from each muscle group.
+          </span>
+        </button>
       </section>
 
       <section className="day-card-grid" aria-label="Weekday workout cards">
@@ -220,6 +268,46 @@ function HIITPage({ onNavigate }: { onNavigate: (path: string) => void }) {
   );
 }
 
+function MixedExercisesPage({
+  onNavigate,
+}: {
+  onNavigate: (path: string) => void;
+}) {
+  const today = new Date();
+  const mixedWorkout = useMemo(() => getDailyMixedWorkout(today), [today]);
+
+  return (
+    <main className="app-main">
+      <div className="day-page-header">
+        <button
+          type="button"
+          className="back-home-button"
+          onClick={() => onNavigate("/")}
+        >
+          Back to Home
+        </button>
+      </div>
+
+      <section className="mixed-header-card">
+        <h2 className="home-title">Mixed Exercises</h2>
+        <p className="home-subtitle">
+          One exercise each from chest, back, shoulders, legs, and arms. This
+          list changes daily.
+        </p>
+      </section>
+
+      <WorkoutDisplay
+        workout={mixedWorkout}
+        dayName={today.toLocaleDateString("en-US", {
+          weekday: "long",
+          month: "short",
+          day: "numeric",
+        })}
+      />
+    </main>
+  );
+}
+
 function FoodGuidePage({ onNavigate }: { onNavigate: (path: string) => void }) {
   return (
     <main className="app-main">
@@ -324,24 +412,35 @@ function App() {
       {route === "/" && <HomePage onNavigate={navigate} />}
       {route === "/hiit" && <HIITPage onNavigate={navigate} />}
       {route === "/food-guide" && <FoodGuidePage onNavigate={navigate} />}
-      {selectedDay && route !== "/" && route !== "/hiit" && route !== "/food-guide" && (
-        <DayPage selectedDay={selectedDay} onNavigate={navigate} />
+      {route === "/mixed-exercises" && (
+        <MixedExercisesPage onNavigate={navigate} />
       )}
-      {!selectedDay && route !== "/" && route !== "/hiit" && route !== "/food-guide" && (
-        <main className="app-main">
-          <section className="rest-day-message">
-            <h2>Page not found</h2>
-            <p>The requested day route does not exist.</p>
-            <button
-              type="button"
-              className="back-home-button"
-              onClick={() => navigate("/")}
-            >
-              Go Home
-            </button>
-          </section>
-        </main>
-      )}
+      {selectedDay &&
+        route !== "/" &&
+        route !== "/hiit" &&
+        route !== "/food-guide" &&
+        route !== "/mixed-exercises" && (
+          <DayPage selectedDay={selectedDay} onNavigate={navigate} />
+        )}
+      {!selectedDay &&
+        route !== "/" &&
+        route !== "/hiit" &&
+        route !== "/food-guide" &&
+        route !== "/mixed-exercises" && (
+          <main className="app-main">
+            <section className="rest-day-message">
+              <h2>Page not found</h2>
+              <p>The requested day route does not exist.</p>
+              <button
+                type="button"
+                className="back-home-button"
+                onClick={() => navigate("/")}
+              >
+                Go Home
+              </button>
+            </section>
+          </main>
+        )}
 
       <button
         type="button"
@@ -355,6 +454,3 @@ function App() {
 }
 
 export default App;
-
-
-
