@@ -1,0 +1,243 @@
+.week-indicator {
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.badge-hiit {
+  background: linear-gradient(135deg, #ff6b6b 0%, #fa5252 100%);
+  color: white;
+}
+
+.badge-bro-split {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Phase Info */
+.phase-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.phase-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.week-number {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Current Day Info */
+.current-day-info {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.current-day-name {
+  margin: 0 0 12px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.hiit-info,
+.bro-split-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.difficulty-label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.muscle-group {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workout-type {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Weekly Overview */
+.weekly-overview {
+  margin-bottom: 20px;
+}
+
+.overview-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.day-item.current-day {
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+  font-weight: 600;
+}
+
+.day-abbreviation {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.day-workout {
+  font-size: 18px;
+}
+
+.hiit-indicator {
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Progress Message */
+.progress-message {
+  padding: 12px 0;
+}
+
+.progress-message p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .week-indicator {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .phase-info {
+    flex-wrap: wrap;
+  }
+
+  .current-day-name {
+    font-size: 24px;
+  }
+
+  .muscle-group {
+    font-size: 16px;
+  }
+
+  .days-grid {
+    gap: 6px;
+  }
+
+  .day-item {
+    padding: 10px 6px;
+  }
+
+  .day-abbreviation {
+    font-size: 11px;
+  }
+
+  .day-workout {
+    font-size: 16px;
+  }
+
+  .progress-message p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-indicator {
+    padding: 16px;
+  }
+
+  .phase-info {
+    margin-bottom: 16px;
+  }
+
+  .current-day-info {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+
+  .current-day-name {
+    font-size: 20px;
+  }
+
+  .muscle-group {
+    font-size: 14px;
+  }
+
+  .days-grid {
+    gap: 4px;
+  }
+
+  .day-item {
+    padding: 8px 4px;
+  }
+
+  .day-item.current-day {
+    transform: scale(1.03);
+  }
+
+  .day-abbreviation {
+    font-size: 10px;
+  }
+
+  .day-workout {
+    font-size: 14px;
+  }
+}
