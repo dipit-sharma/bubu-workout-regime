@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
-import { Workout, Exercise } from "../types/workoutTypes";
 import ExerciseCard from "./ExerciseCard";
 import "../styles/WorkoutDisplay.css";
+import type { Workout } from "../types/workoutTypes";
 
 interface WorkoutDisplayProps {
   workout: Workout;

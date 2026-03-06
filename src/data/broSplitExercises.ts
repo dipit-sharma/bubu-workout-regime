@@ -1,9 +1,11 @@
-import { BroSplitDay, Exercise } from '../types/workoutTypes';
+
 
 /**
  * Bro Split Exercise Library
  * 6 exercises per muscle group
  */
+
+import type { Exercise } from "../types/workoutTypes";
 
 // === CHEST EXERCISES ===
 const chestExercises: Exercise[] = [

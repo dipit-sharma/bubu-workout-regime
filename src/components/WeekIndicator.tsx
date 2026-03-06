@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
-import { MuscleGroup } from "../types/workoutTypes";
 import "../styles/WeekIndicator.css";
+import type { MuscleGroup } from "../types/workoutTypes";
 
 interface WeekIndicatorProps {
   currentWeek: number;

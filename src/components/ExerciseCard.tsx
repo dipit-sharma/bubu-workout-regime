@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Exercise } from "../types/workoutTypes";
+import React, { useState, useEffect, useMemo } from "react";
 import "../styles/ExerciseCard.css";
+import type { Exercise } from "../types/workoutTypes";
 
 interface ExerciseCardProps {
   exercise: Exercise;
@@ -22,10 +22,53 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
   onComplete,
 }) => {
   const [showInstructions, setShowInstructions] = useState(false);
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const [remainingSeconds, setRemainingSeconds] = useState(exercise.duration);
+
+  useEffect(() => {
+    setIsTimerRunning(false);
+    setRemainingSeconds(exercise.duration);
+  }, [exercise.id, exercise.duration]);
+
+  useEffect(() => {
+    if (!isTimerRunning || remainingSeconds <= 0) {
+      return;
+    }
+
+    const interval = window.setInterval(() => {
+      setRemainingSeconds((prev) => {
+        if (prev <= 1) {
+          window.clearInterval(interval);
+          setIsTimerRunning(false);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => window.clearInterval(interval);
+  }, [isTimerRunning, remainingSeconds]);
+
+  const progressPercentage = useMemo(() => {
+    if (exercise.duration <= 0) {
+      return 0;
+    }
+
+    const elapsed = exercise.duration - remainingSeconds;
+    return Math.min(
+      100,
+      Math.max(0, Math.round((elapsed / exercise.duration) * 100)),
+    );
+  }, [exercise.duration, remainingSeconds]);
+
+  const formatTime = (seconds: number): string => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${minutes}:${secs.toString().padStart(2, "0")}`;
+  };
 
   return (
     <div className={`exercise-card ${isCompleted ? "completed" : ""}`}>
-      {/* Exercise Header */}
       <div className="exercise-header">
         <div className="exercise-title-section">
           {exerciseNumber && totalExercises && (
@@ -38,10 +81,9 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
             <p className="exercise-description">{exercise.description}</p>
           )}
         </div>
-        {isCompleted && <div className="completed-badge">✓ Completed</div>}
+        {isCompleted && <div className="completed-badge">Completed</div>}
       </div>
 
-      {/* Exercise GIF */}
       <div className="exercise-gif-container">
         <img
           src={exercise.gifUrl}
@@ -54,7 +96,39 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
         />
       </div>
 
-      {/* Exercise Details */}
+      <div className="exercise-timer" aria-live="polite">
+        <div className="timer-header-row">
+          <span className="timer-label">Exercise Timer</span>
+          <span className="timer-value">{formatTime(remainingSeconds)}</span>
+        </div>
+        <div className="timer-progress-track">
+          <div
+            className="timer-progress-fill"
+            style={{ width: `${progressPercentage}%` }}
+          />
+        </div>
+        <div className="timer-actions">
+          <button
+            type="button"
+            className="timer-button"
+            onClick={() => setIsTimerRunning((prev) => !prev)}
+            disabled={remainingSeconds === 0}
+          >
+            {isTimerRunning ? "Pause" : "Start"}
+          </button>
+          <button
+            type="button"
+            className="timer-button timer-button-secondary"
+            onClick={() => {
+              setIsTimerRunning(false);
+              setRemainingSeconds(exercise.duration);
+            }}
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+
       <div className="exercise-details">
         <div className="detail-row">
           <span className="detail-label">Duration:</span>
@@ -73,9 +147,9 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
 
         {exercise.sets && exercise.reps && (
           <div className="detail-row">
-            <span className="detail-label">Sets × Reps:</span>
+            <span className="detail-label">Sets x Reps:</span>
             <span className="detail-value">
-              {exercise.sets} × {exercise.reps}
+              {exercise.sets} x {exercise.reps}
             </span>
           </div>
         )}
@@ -88,14 +162,14 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
         )}
       </div>
 
-      {/* Instructions Toggle */}
       {exercise.instructions && exercise.instructions.length > 0 && (
         <div className="instructions-section">
           <button
+            type="button"
             className="instructions-toggle"
             onClick={() => setShowInstructions(!showInstructions)}
           >
-            {showInstructions ? "▼ Hide Instructions" : "▶ Show Instructions"}
+            {showInstructions ? "Hide Instructions" : "Show Instructions"}
           </button>
 
           {showInstructions && (
@@ -110,7 +184,6 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
         </div>
       )}
 
-      {/* Complete Button */}
       {onComplete && !isCompleted && (
         <button
           className="complete-button"

@@ -1,6 +1,6 @@
 import React from "react";
-import { DifficultyLevel } from "../types/workoutTypes";
 import "../styles/DifficultySelector.css";
+import type { DifficultyLevel } from "../types/workoutTypes";
 
 interface DifficultySelectorProps {
   onSelectDifficulty: (difficulty: DifficultyLevel, duration: number) => void;

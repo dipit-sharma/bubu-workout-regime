@@ -1,9 +1,11 @@
-import { HIITWorkout, Exercise } from '../types/workoutTypes';
+
 
 /**
  * HIIT Exercise Library
  * 30 seconds work / 30 seconds rest pattern
  */
+
+import type { Exercise, HIITWorkout } from "../types/workoutTypes";
 
 const hiitExerciseLibrary: Exercise[] = [
     {

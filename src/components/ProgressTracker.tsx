@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import { WorkoutProgress } from "../types/workoutTypes";
 import "../styles/ProgressTracker.css";
 
 interface ProgressTrackerProps {

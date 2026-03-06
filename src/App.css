@@ -1,42 +1,291 @@
+/* Global Styles */
+:root {
+  --primary-color: #667eea;
+  --primary-dark: #764ba2;
+  --accent-red: #ff6b6b;
+  --accent-green: #51cf66;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666;
+  --bg-light: #f9f9f9;
+  --border-color: #e8e8e8;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Header */
+.app-header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 100%
+  );
+  color: white;
+  padding: 40px 20px;
   text-align: center;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-title {
+  margin: 0;
+  font-size: clamp(24px, 5vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-@keyframes logo-spin {
+.app-subtitle {
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+/* Main Content */
+.app-main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Rest Day Message */
+.rest-day-message {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-md);
+  animation: slideUp 0.5s ease;
+}
+
+.rest-day-message h2 {
+  margin: 0 0 12px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.rest-day-message p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.rest-suggestions {
+  opacity: 0.95;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.card {
-  padding: 2em;
+/* No Workout Message */
+.no-workout-message {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-top: 24px;
 }
 
-.read-the-docs {
-  color: #888;
+.no-workout-message p {
+  margin: 0;
+}
+
+/* Footer */
+.app-footer {
+  background: var(--text-primary);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 500;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-footer p {
+  margin: 4px 0;
+}
+
+.footer-phase {
+  font-size: 12px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 32px 16px;
+  }
+
+  .app-title {
+    font-size: 28px;
+  }
+
+  .app-subtitle {
+    font-size: 14px;
+  }
+
+  .app-main {
+    padding: 16px;
+  }
+
+  .rest-day-message {
+    padding: 32px 20px;
+  }
+
+  .rest-day-message h2 {
+    font-size: 24px;
+  }
+
+  .rest-day-message p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 24px 12px;
+  }
+
+  .app-title {
+    font-size: 22px;
+  }
+
+  .app-subtitle {
+    font-size: 13px;
+  }
+
+  .app-main {
+    padding: 12px;
+  }
+
+  .rest-day-message {
+    padding: 24px 16px;
+    border-radius: 12px;
+  }
+
+  .rest-day-message h2 {
+    font-size: 20px;
+  }
+
+  .no-workout-message {
+    padding: 40px 16px;
+    border-radius: 12px;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+.day-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.day-nav-button {
+  border: 1px solid rgba(102, 126, 234, 0.35);
+  background: rgba(255, 255, 255, 0.86);
+  color: #2d3a6b;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.day-nav-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(45, 58, 107, 0.12);
+  background: #ffffff;
+}
+
+.day-nav-today {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.day-nav-today:hover {
+  background: linear-gradient(135deg, #5a70df 0%, #6b4295 100%);
+}
+
+@media (max-width: 768px) {
+  .day-navigation {
+    grid-template-columns: 1fr;
+  }
 }
