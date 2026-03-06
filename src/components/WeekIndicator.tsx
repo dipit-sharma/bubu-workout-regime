@@ -38,7 +38,7 @@ export const WeekIndicator: React.FC<WeekIndicatorProps> = ({
   ];
 
   const currentDayName = days[currentDay].name;
-  const broSplitSchedule = useMemo(() => {
+  const broSplitSchedule = useMemo<Record<number, string>>(() => {
     return {
       0: "Rest Day",
       1: "Chest",
@@ -101,7 +101,6 @@ export const WeekIndicator: React.FC<WeekIndicatorProps> = ({
         <div className="days-grid">
           {days.map((day, index) => {
             const isToday = index === currentDay;
-            const dayLabel = isHIITPhase ? "HIIT" : broSplitSchedule[index];
 
             return (
               <div
@@ -137,3 +136,5 @@ export const WeekIndicator: React.FC<WeekIndicatorProps> = ({
 };
 
 export default WeekIndicator;
+
+

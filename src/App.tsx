@@ -5,8 +5,10 @@ import { broSplitExercises } from "./data/broSplitExercises";
 import { hiitExercises } from "./data/hiitExercises";
 import type { MuscleGroup, Workout } from "./types/workoutTypes";
 
+type DayName = keyof typeof broSplitExercises.schedule;
+
 type DayEntry = {
-  day: string;
+  day: DayName;
   slug: string;
   muscleGroup: string;
   muscleGroupKey?: MuscleGroup;
@@ -353,3 +355,6 @@ function App() {
 }
 
 export default App;
+
+
+

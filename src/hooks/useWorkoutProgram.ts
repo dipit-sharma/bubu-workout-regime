@@ -37,7 +37,8 @@ export const useWorkoutProgram = (
     startDate?: Date
 ): UseWorkoutProgramReturn => {
     const currentDayInfo = useCurrentDay(startDate);
-    const dayNames = useMemo(
+    type BroSplitDayName = keyof typeof broSplitExercises.schedule;
+    const dayNames = useMemo<BroSplitDayName[]>(
         () => ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         []
     );
@@ -192,3 +193,5 @@ export const useWorkoutProgram = (
 };
 
 export default useWorkoutProgram;
+
+
