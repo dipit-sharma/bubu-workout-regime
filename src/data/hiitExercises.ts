@@ -13,7 +13,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Jumping Jacks',
         description: 'Full body cardio warm-up',
         duration: 30,
-        gifUrl: '/gifs/hiit/jumping-jacks.gif',
+        gifUrl: 'https://media1.tenor.com/m/9YRh0wV0VosAAAAC/exercise-workout.gif',
         instructions: [
             'Stand with feet together, arms at sides',
             'Jump while spreading feet and raising arms',
@@ -28,7 +28,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Burpees',
         description: 'Full body intensive exercise',
         duration: 30,
-        gifUrl: '/gifs/hiit/burpees.gif',
+        gifUrl: 'https://media1.tenor.com/m/cy3lIf2m-fAAAAAC/kendrick-kendricklamar.gif',
         instructions: [
             'Stand with feet shoulder-width apart',
             'Squat down and place hands on ground',
@@ -44,7 +44,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Mountain Climbers',
         description: 'Core and cardio exercise',
         duration: 30,
-        gifUrl: '/gifs/hiit/mountain-climbers.gif',
+        gifUrl: 'https://media1.tenor.com/m/21qUJXduNeQAAAAC/working-out-deshun-murrell.gif',
         instructions: [
             'Start in plank position',
             'Drive knees toward chest alternately',
@@ -59,7 +59,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'High Knees',
         description: 'Cardio and hip flexor activation',
         duration: 30,
-        gifUrl: '/gifs/hiit/high-knees.gif',
+        gifUrl: 'https://media1.tenor.com/m/4cd1ZreqQR0AAAAC/the-studio-workout.gif',
         instructions: [
             'Stand with feet hip-width apart',
             'Run in place, driving knees up to hip level',
@@ -74,7 +74,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Squat Jumps',
         description: 'Lower body power and cardio',
         duration: 30,
-        gifUrl: '/gifs/hiit/squat-jumps.gif',
+        gifUrl: 'https://media1.tenor.com/m/KTAavalOAWQAAAAC/squat-jumps.gif',
         instructions: [
             'Stand with feet shoulder-width apart',
             'Lower into a squat position',
@@ -89,7 +89,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Push-ups',
         description: 'Upper body and core strength',
         duration: 30,
-        gifUrl: '/gifs/hiit/push-ups.gif',
+        gifUrl: 'https://media1.tenor.com/m/8hrEpBjcbl0AAAAC/liver-king-push-up.gif',
         instructions: [
             'Start in plank position, hands shoulder-width apart',
             'Lower your body until chest nearly touches floor',
@@ -104,7 +104,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Plank Jacks',
         description: 'Core and cardio combination',
         duration: 30,
-        gifUrl: '/gifs/hiit/plank-jacks.gif',
+        gifUrl: 'https://media1.tenor.com/m/zVr80MgRu-YAAAAC/gym-fitness.gif',
         instructions: [
             'Start in plank position',
             'Jump feet out to sides, then back together',
@@ -119,7 +119,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Jump Rope',
         description: 'Cardio and coordination',
         duration: 30,
-        gifUrl: '/gifs/hiit/jump-rope.gif',
+        gifUrl: 'https://media1.tenor.com/m/FzbqxYZC98IAAAAC/jump-rope-exercise.gif',
         instructions: [
             'Hold rope handles at waist height',
             'Jump over rope with small, quick jumps',
@@ -134,7 +134,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Lunges',
         description: 'Lower body strength',
         duration: 30,
-        gifUrl: '/gifs/hiit/lunges.gif',
+        gifUrl: 'https://media1.tenor.com/m/fWiC9Ze5eUMAAAAC/lunges-exercise.gif',
         instructions: [
             'Stand with feet hip-width apart',
             'Step forward and lower hips',
@@ -149,7 +149,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Bear Crawl',
         description: 'Full body cardio and strength',
         duration: 30,
-        gifUrl: '/gifs/hiit/bear-crawl.gif',
+        gifUrl: 'https://media1.tenor.com/m/W7u3yBYEWD8AAAAC/bear-crawl-exercise.gif',
         instructions: [
             'Start in plank position',
             'Crawl forward on hands and feet',
@@ -164,7 +164,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Box Jumps',
         description: 'Explosive lower body power',
         duration: 30,
-        gifUrl: '/gifs/hiit/box-jumps.gif',
+        gifUrl: 'https://media1.tenor.com/m/rviKVzyEwe8AAAAC/leap-fail-lost-balance.gif',
         instructions: [
             'Stand facing a sturdy box or bench',
             'Swing arms and jump onto box',
@@ -179,7 +179,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Tricep Dips',
         description: 'Upper body strength',
         duration: 30,
-        gifUrl: '/gifs/hiit/tricep-dips.gif',
+        gifUrl: 'https://media1.tenor.com/m/6zLmQ1C_33YAAAAC/dips.gif',
         instructions: [
             'Use a chair or bench behind you',
             'Place hands on edge, body in front',
@@ -335,3 +335,6 @@ export const hiitExercises = {
     workouts20Min: [hiit20MinBeginner, hiit20MinIntermediate, hiit20MinAdvanced],
     all: allHIITWorkouts
 };
+
+
+

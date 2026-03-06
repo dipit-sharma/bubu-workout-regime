@@ -14,7 +14,7 @@ const chestExercises: Exercise[] = [
         name: 'Barbell Bench Press',
         description: 'Primary chest builder',
         duration: 60,
-        gifUrl: '/gifs/bro-split/chest/bench-press.gif',
+        gifUrl: 'https://media1.tenor.com/m/zVr80MgRu-YAAAAC/gym-fitness.gif',
         instructions: [
             'Lie on flat bench, feet on ground',
             'Grip bar slightly wider than shoulders',
@@ -31,7 +31,7 @@ const chestExercises: Exercise[] = [
         name: 'Incline Dumbbell Press',
         description: 'Upper chest emphasis',
         duration: 60,
-        gifUrl: '/gifs/bro-split/chest/incline-dumbbell.gif',
+        gifUrl: 'https://media1.tenor.com/m/EKlO1-1CGSoAAAAC/kinobody.gif',
         instructions: [
             'Sit on incline bench (45 degrees)',
             'Hold dumbbells at shoulder height',
@@ -48,7 +48,7 @@ const chestExercises: Exercise[] = [
         name: 'Dumbbell Floor Press',
         description: 'Chest with tricep emphasis',
         duration: 60,
-        gifUrl: '/gifs/bro-split/chest/dumbbell-floor-press.gif',
+        gifUrl: 'https://media1.tenor.com/m/Vd6Qs3RMQRsAAAAC/lifting-weights-working-out.gif',
         instructions: [
             'Lie on floor with knees bent',
             'Hold dumbbells at chest level',
@@ -65,7 +65,7 @@ const chestExercises: Exercise[] = [
         name: 'Cable Flyes',
         description: 'Chest isolation',
         duration: 45,
-        gifUrl: '/gifs/bro-split/chest/cable-flyes.gif',
+        gifUrl: 'https://media1.tenor.com/m/TMCtJxQ-XqoAAAAC/incline-chest-fly-cable.gif',
         instructions: [
             'Set cables at shoulder height',
             'Stand in middle, grab handles',
@@ -82,7 +82,7 @@ const chestExercises: Exercise[] = [
         name: 'Chest Dips',
         description: 'Lower chest and triceps',
         duration: 45,
-        gifUrl: '/gifs/bro-split/chest/dips.gif',
+        gifUrl: 'https://media1.tenor.com/m/LfaWouy1fq8AAAAC/dips-chest-day.gif',
         instructions: [
             'Use dip bars, lean slightly forward',
             'Lower body by bending elbows',
@@ -99,7 +99,7 @@ const chestExercises: Exercise[] = [
         name: 'Decline Push-ups',
         description: 'Upper chest activation',
         duration: 45,
-        gifUrl: '/gifs/bro-split/chest/decline-push-ups.gif',
+        gifUrl: 'https://media1.tenor.com/m/lBF0RCkepZoAAAAC/imfact-jeup.gif',
         instructions: [
             'Feet elevated on bench or platform',
             'Hands on floor, shoulder-width apart',
@@ -120,7 +120,7 @@ const backExercises: Exercise[] = [
         name: 'Conventional Deadlift',
         description: 'Full back and posterior chain',
         duration: 75,
-        gifUrl: '/gifs/bro-split/back/deadlift.gif',
+        gifUrl: 'https://media1.tenor.com/m/NgtmNzYYAzYAAAAC/deadlift-james-smith.gif',
         instructions: [
             'Stand with feet hip-width apart',
             'Grip barbell just outside legs',
@@ -137,7 +137,7 @@ const backExercises: Exercise[] = [
         name: 'Barbell Bent-Over Rows',
         description: 'Mid and upper back',
         duration: 60,
-        gifUrl: '/gifs/bro-split/back/barbell-rows.gif',
+        gifUrl: 'https://media1.tenor.com/m/zUJNmi4R3GkAAAAC/prezentace.gif',
         instructions: [
             'Bend at hips, keep back straight',
             'Grip barbell shoulder-width apart',
@@ -154,7 +154,7 @@ const backExercises: Exercise[] = [
         name: 'Single Arm Dumbbell Rows',
         description: 'Unilateral back strength',
         duration: 60,
-        gifUrl: '/gifs/bro-split/back/dumbbell-rows.gif',
+        gifUrl: 'https://media1.tenor.com/m/ZA7d-cdoYEIAAAAC/bentoverrows.gif',
         instructions: [
             'Hinge forward, one knee on bench',
             'Pull dumbbell to hip',
@@ -171,7 +171,7 @@ const backExercises: Exercise[] = [
         name: 'Lat Pulldowns',
         description: 'Lats and upper back',
         duration: 45,
-        gifUrl: '/gifs/bro-split/back/lat-pulldowns.gif',
+        gifUrl: 'https://media1.tenor.com/m/AR6A1jMcnE8AAAAC/lat-pull-down.gif',
         instructions: [
             'Sit with chest against pad',
             'Grip the bar wider than shoulders',
@@ -188,7 +188,7 @@ const backExercises: Exercise[] = [
         name: 'Face Pulls',
         description: 'Rear delts and upper back',
         duration: 45,
-        gifUrl: '/gifs/bro-split/back/face-pulls.gif',
+        gifUrl: 'https://media1.tenor.com/m/_U_hRgMJ43cAAAAC/cable-face-pulls.gif',
         instructions: [
             'Set cable at face height',
             'Grab with wide grip',
@@ -205,7 +205,7 @@ const backExercises: Exercise[] = [
         name: 'Inverted Rows',
         description: 'Back strength with body weight',
         duration: 45,
-        gifUrl: '/gifs/bro-split/back/inverted-rows.gif',
+        gifUrl: 'https://media1.tenor.com/m/mUGlCgqdD7oAAAAC/inverted-row.gif',
         instructions: [
             'Use low bar, body straight',
             'Pull chest toward bar',
@@ -226,7 +226,7 @@ const shoulderExercises: Exercise[] = [
         name: 'Barbell Military Press',
         description: 'Shoulder pressing power',
         duration: 60,
-        gifUrl: '/gifs/bro-split/shoulders/military-press.gif',
+        gifUrl: 'https://media1.tenor.com/m/CV1FfGVNpdcAAAAC/desenvolvimento-militar.gif',
         instructions: [
             'Stand with feet shoulder-width apart',
             'Grip barbell at shoulder height',
@@ -243,7 +243,7 @@ const shoulderExercises: Exercise[] = [
         name: 'Lateral Dumbbell Raises',
         description: 'Shoulder width builder',
         duration: 45,
-        gifUrl: '/gifs/bro-split/shoulders/lateral-raises.gif',
+        gifUrl: 'https://media1.tenor.com/m/-OavRqpxSaEAAAAC/eleva%C3%A7%C3%A3o-lateral.gif',
         instructions: [
             'Stand with dumbbells at sides',
             'Keep slight elbow bend',
@@ -260,7 +260,7 @@ const shoulderExercises: Exercise[] = [
         name: 'Rear Delt Flyes',
         description: 'Rear shoulder development',
         duration: 45,
-        gifUrl: '/gifs/bro-split/shoulders/rear-delt-flyes.gif',
+        gifUrl: 'https://media1.tenor.com/m/wSN6iwABDE8AAAAC/rear-delt-cable-fly-single-arm.gif',
         instructions: [
             'Hinge forward slightly',
             'Hold dumbbells in front of you',
@@ -277,7 +277,7 @@ const shoulderExercises: Exercise[] = [
         name: 'Arnold Press',
         description: 'All three shoulder heads',
         duration: 60,
-        gifUrl: '/gifs/bro-split/shoulders/arnold-press.gif',
+        gifUrl: 'https://media1.tenor.com/m/ZR-_3Mxq0gYAAAAC/arnold-press.gif',
         instructions: [
             'Hold dumbbells at shoulder height, palms facing you',
             'Press up while rotating palms outward',
@@ -293,7 +293,7 @@ const shoulderExercises: Exercise[] = [
         name: 'Cable Lateral Raises',
         description: 'Shoulders - constant tension',
         duration: 45,
-        gifUrl: '/gifs/bro-split/shoulders/cable-raises.gif',
+        gifUrl: 'https://media1.tenor.com/m/sxbft6ZWeK8AAAAC/cable-lateral-raise-single-arm.gif',
         instructions: [
             'Hold cable at side',
             'Raise cable to shoulder height',
@@ -310,7 +310,7 @@ const shoulderExercises: Exercise[] = [
         name: 'Upright Barbell Rows',
         description: 'Shoulder and trap builder',
         duration: 45,
-        gifUrl: '/gifs/bro-split/shoulders/upright-rows.gif',
+        gifUrl: 'https://media1.tenor.com/m/StZ4pCYVM_AAAAAC/uppright-row-z-bar.gif',
         instructions: [
             'Stand with feet shoulder-width apart',
             'Grip barbell with narrow stance',
@@ -331,7 +331,7 @@ const legExercises: Exercise[] = [
         name: 'Barbell Back Squat',
         description: 'Quadriceps builder',
         duration: 75,
-        gifUrl: '/gifs/bro-split/legs/back-squat.gif',
+        gifUrl: 'https://media1.tenor.com/m/q0Sisfl_0V4AAAAC/bb-back-squats.gif',
         instructions: [
             'Place bar on upper back',
             'Feet shoulder-width apart',
@@ -348,7 +348,7 @@ const legExercises: Exercise[] = [
         name: 'Leg Press',
         description: 'Leg strength builder',
         duration: 60,
-        gifUrl: '/gifs/bro-split/legs/leg-press.gif',
+        gifUrl: 'https://media1.tenor.com/m/Om6tZV5FwBgAAAAC/prazoli-prado.gif',
         instructions: [
             'Sit in machine with back against pad',
             'Place feet on platform',
@@ -365,7 +365,7 @@ const legExercises: Exercise[] = [
         name: 'Lying Leg Curls',
         description: 'Hamstring isolation',
         duration: 45,
-        gifUrl: '/gifs/bro-split/legs/leg-curls.gif',
+        gifUrl: 'https://media1.tenor.com/m/yGOPV0J4vxEAAAAC/mesa-flexora-treino-mestre.gif',
         instructions: [
             'Lie face down on machine',
             'Position legs under pad',
@@ -382,7 +382,7 @@ const legExercises: Exercise[] = [
         name: 'Leg Extensions',
         description: 'Quadriceps isolation',
         duration: 45,
-        gifUrl: '/gifs/bro-split/legs/leg-extensions.gif',
+        gifUrl: 'https://media1.tenor.com/m/bqKtsSuqilQAAAAC/gym.gif',
         instructions: [
             'Sit in machine with back against pad',
             'Place feet under pad',
@@ -399,7 +399,7 @@ const legExercises: Exercise[] = [
         name: 'Walking Lunges',
         description: 'Legs and balance',
         duration: 60,
-        gifUrl: '/gifs/bro-split/legs/walking-lunges.gif',
+        gifUrl: 'https://media1.tenor.com/m/NzU_WzaeD_oAAAAC/lunges-workout.gif',
         instructions: [
             'Stand with feet together',
             'Step forward and lower hips',
@@ -416,7 +416,7 @@ const legExercises: Exercise[] = [
         name: 'Calf Raises',
         description: 'Calf muscle builder',
         duration: 45,
-        gifUrl: '/gifs/bro-split/legs/calf-raises.gif',
+        gifUrl: 'https://media1.tenor.com/m/JYsGi3a3Y_4AAAAC/single-leg-calf-raise.gif',
         instructions: [
             'Stand on step or platform',
             'Rise up on toes',
@@ -437,7 +437,7 @@ const armExercises: Exercise[] = [
         name: 'Barbell Curls',
         description: 'Bicep builder',
         duration: 60,
-        gifUrl: '/gifs/bro-split/arms/barbell-curls.gif',
+        gifUrl: 'https://media1.tenor.com/m/sPByAfA9ynAAAAAC/handsome-gymer.gif',
         instructions: [
             'Stand with feet shoulder-width apart',
             'Grip barbell with underhand grip',
@@ -454,7 +454,7 @@ const armExercises: Exercise[] = [
         name: 'Rope Tricep Pushdowns',
         description: 'Tricep isolation',
         duration: 45,
-        gifUrl: '/gifs/bro-split/arms/rope-pushdowns.gif',
+        gifUrl: 'https://media1.tenor.com/m/mbebKudZjxYAAAAC/tr%C3%ADceps-pulley.gif',
         instructions: [
             'Stand facing cable machine',
             'Grip rope attachment',
@@ -471,7 +471,7 @@ const armExercises: Exercise[] = [
         name: 'Dumbbell Curls',
         description: 'Bicep strength',
         duration: 45,
-        gifUrl: '/gifs/bro-split/arms/dumbbell-curls.gif',
+        gifUrl: 'https://media1.tenor.com/m/6WP4hNz7RmgAAAAC/dumbbells-bicep-curl.gif',
         instructions: [
             'Stand with dumbbells at sides',
             'Keep elbows tucked',
@@ -488,7 +488,7 @@ const armExercises: Exercise[] = [
         name: 'Overhead Tricep Extension',
         description: 'Tricep and shoulder',
         duration: 45,
-        gifUrl: '/gifs/bro-split/arms/overhead-tricep-extension.gif',
+        gifUrl: 'https://media1.tenor.com/m/Vq6LrVGUAKIAAAAC/tr%C3%ADceps-fraces-na-polia.gif',
         instructions: [
             'Hold dumbbell above head',
             'Lower dumbbell behind head',
@@ -505,7 +505,7 @@ const armExercises: Exercise[] = [
         name: 'Cable Curls',
         description: 'Bicep isolation - constant tension',
         duration: 45,
-        gifUrl: '/gifs/bro-split/arms/cable-curls.gif',
+        gifUrl: 'https://media1.tenor.com/m/ObeK-tSJtyQAAAAC/cable-close-grip-curls.gif',
         instructions: [
             'Stand facing cable machine',
             'Grip curl bar with underhand grip',
@@ -522,7 +522,7 @@ const armExercises: Exercise[] = [
         name: 'Hammer Curls',
         description: 'Bicep and forearm builder',
         duration: 45,
-        gifUrl: '/gifs/bro-split/arms/hammer-curls.gif',
+        gifUrl: 'https://media1.tenor.com/m/iO6D-DBFRTcAAAAC/dumbell-hammer-curls.gif',
         instructions: [
             'Stand with dumbbells at sides, neutral grip',
             'Curl dumbbells up toward shoulders',
@@ -613,3 +613,6 @@ export const broSplitExercises = {
     arms: armExercises,
     schedule: broSplitWeeklySchedule
 };
+
+
+
