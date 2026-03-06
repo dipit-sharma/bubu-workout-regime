@@ -160,3 +160,72 @@ body {
     font-size: 24px;
   }
 }
+
+.hiit-shortcut-card-wrapper {
+  margin-bottom: 16px;
+}
+
+.hiit-shortcut-card {
+  width: 100%;
+  border: 1px solid #b9c7eb;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0f2f70 0%, #1c54bc 100%);
+  color: #ffffff;
+  text-align: left;
+  padding: 18px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.hiit-shortcut-title {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.hiit-shortcut-subtitle {
+  display: block;
+  font-size: 14px;
+  opacity: 0.92;
+}
+
+.hiit-page-header {
+  margin-bottom: 14px;
+}
+
+.hiit-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hiit-option-card {
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.hiit-option-active {
+  border-color: #ef4444;
+  background: linear-gradient(135deg, #fff 0%, #fff1f1 100%);
+}
+
+.hiit-option-title {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hiit-option-duration {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}

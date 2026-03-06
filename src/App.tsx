@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import WorkoutDisplay from "./components/WorkoutDisplay";
 import { broSplitExercises } from "./data/broSplitExercises";
+import { hiitExercises } from "./data/hiitExercises";
 import type { MuscleGroup, Workout } from "./types/workoutTypes";
 
 type DayEntry = {
@@ -10,6 +11,8 @@ type DayEntry = {
   muscleGroup: string;
   muscleGroupKey?: MuscleGroup;
 };
+
+type HIITLevel = "easy" | "hard";
 
 const DAY_CARDS: DayEntry[] = [
   { day: "Sunday", slug: "sunday", muscleGroup: "Rest" },
@@ -100,6 +103,19 @@ function DayPage({
         </button>
       </div>
 
+      <section className="hiit-shortcut-card-wrapper">
+        <button
+          type="button"
+          className="hiit-shortcut-card"
+          onClick={() => onNavigate("/hiit")}
+        >
+          <span className="hiit-shortcut-title">HIIT Workout</span>
+          <span className="hiit-shortcut-subtitle">
+            Quick cardio session. Choose easy (10 min) or hard (20 min).
+          </span>
+        </button>
+      </section>
+
       {workout && workout.exercises.length > 0 ? (
         <WorkoutDisplay
           workout={workout}
@@ -111,6 +127,71 @@ function DayPage({
           <h2>{selectedDay.day}</h2>
           <p>{selectedDay.muscleGroup} day. No exercises scheduled.</p>
         </section>
+      )}
+    </main>
+  );
+}
+
+function HIITPage({ onNavigate }: { onNavigate: (path: string) => void }) {
+  const [selectedLevel, setSelectedLevel] = useState<HIITLevel | null>(null);
+
+  const selectedWorkout = useMemo<Workout | null>(() => {
+    if (selectedLevel === "easy") {
+      return hiitExercises.all.find((item) => item.id === "hiit-10-beginner") ?? null;
+    }
+
+    if (selectedLevel === "hard") {
+      return hiitExercises.all.find((item) => item.id === "hiit-20-advanced") ?? null;
+    }
+
+    return null;
+  }, [selectedLevel]);
+
+  return (
+    <main className="app-main">
+      <div className="day-page-header">
+        <button
+          type="button"
+          className="back-home-button"
+          onClick={() => onNavigate("/")}
+        >
+          Back to Home
+        </button>
+      </div>
+
+      <section className="hiit-page-header">
+        <h2 className="home-title">HIIT Workouts</h2>
+        <p className="home-subtitle">
+          Select intensity to load your HIIT exercise list.
+        </p>
+      </section>
+
+      <section className="hiit-options" aria-label="HIIT difficulty options">
+        <button
+          type="button"
+          className={`hiit-option-card ${selectedLevel === "easy" ? "hiit-option-active" : ""}`}
+          onClick={() => setSelectedLevel("easy")}
+        >
+          <span className="hiit-option-title">Easy</span>
+          <span className="hiit-option-duration">10 minutes</span>
+        </button>
+
+        <button
+          type="button"
+          className={`hiit-option-card ${selectedLevel === "hard" ? "hiit-option-active" : ""}`}
+          onClick={() => setSelectedLevel("hard")}
+        >
+          <span className="hiit-option-title">Hard</span>
+          <span className="hiit-option-duration">20 minutes</span>
+        </button>
+      </section>
+
+      {selectedWorkout && (
+        <WorkoutDisplay
+          workout={selectedWorkout}
+          dayName="HIIT"
+          muscleGroup={undefined}
+        />
       )}
     </main>
   );
@@ -149,10 +230,11 @@ function App() {
       </header>
 
       {route === "/" && <HomePage onNavigate={navigate} />}
-      {selectedDay && route !== "/" && (
+      {route === "/hiit" && <HIITPage onNavigate={navigate} />}
+      {selectedDay && route !== "/" && route !== "/hiit" && (
         <DayPage selectedDay={selectedDay} onNavigate={navigate} />
       )}
-      {!selectedDay && route !== "/" && (
+      {!selectedDay && route !== "/" && route !== "/hiit" && (
         <main className="app-main">
           <section className="rest-day-message">
             <h2>Page not found</h2>
