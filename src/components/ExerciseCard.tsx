@@ -85,15 +85,31 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
       </div>
 
       <div className="exercise-gif-container">
-        <img
-          src={exercise.gifUrl}
-          alt={exercise.name}
-          className="exercise-gif"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src =
-              "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2U4ZThlOCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+R0lGIE5vdCBGb3VuZDwvdGV4dD48L3N2Zz4=";
-          }}
-        />
+        {Array.isArray(exercise.gifUrl) ? (
+          exercise.gifUrl.map((url, index) => (
+            <div key={index} style={{ width: "100%" }}>
+              <img
+                src={url}
+                alt={exercise.name}
+                className="exercise-gif"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src =
+                    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2U4ZThlOCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+R0lGIE5vdCBGb3VuZDwvdGV4dD48L3N2Zz4=";
+                }}
+              />
+            </div>
+          ))
+        ) : (
+          <img
+            src={exercise.gifUrl}
+            alt={exercise.name}
+            className="exercise-gif"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src =
+                "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2U4ZThlOCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+R0lGIE5vdCBGb3VuZDwvdGV4dD48L3N2Zz4=";
+            }}
+          />
+        )}
       </div>
 
       <div className="exercise-timer" aria-live="polite">

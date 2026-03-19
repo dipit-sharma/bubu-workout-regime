@@ -14,7 +14,7 @@ const chestExercises: Exercise[] = [
         name: 'Barbell Bench Press',
         description: 'Primary chest builder',
         duration: 60,
-        gifUrl: 'https://media1.tenor.com/m/zVr80MgRu-YAAAAC/gym-fitness.gif',
+        gifUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmtmmoSIcudqC5BlowoHMTVlL4cDw0Lrv48w&s',
         instructions: [
             'Lie on flat bench, feet on ground',
             'Grip bar slightly wider than shoulders',
@@ -24,7 +24,24 @@ const chestExercises: Exercise[] = [
         difficulty: 'intermediate',
         muscleGroup: 'chest',
         sets: 4,
-        reps: 8
+        reps: 15
+    },
+    {
+        id: 'chest-cable-flyes',
+        name: 'Pec Flyes',
+        description: 'Chest isolation',
+        duration: 45,
+        gifUrl: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Pec-Deck-Fly.gif',
+        instructions: [
+            'Set cables at shoulder height',
+            'Stand in middle, grab handles',
+            'Bring hands together in front',
+            'Return to starting position with control'
+        ],
+        difficulty: 'intermediate',
+        muscleGroup: 'chest',
+        sets: 4,
+        reps: 12
     },
     {
         id: 'chest-incline-dumbbell',
@@ -40,76 +57,60 @@ const chestExercises: Exercise[] = [
         ],
         difficulty: 'intermediate',
         muscleGroup: 'chest',
-        sets: 3,
-        reps: 10
+        sets: 4,
+        reps: 12
     },
+
     {
-        id: 'chest-dumbbell-press',
-        name: 'Dumbbell Floor Press',
-        description: 'Chest with tricep emphasis',
+        id: 'inline-dumbbell-flyes',
+        name: 'Incline Cable Flyes/Incline Dumbbell Flyes',
+        description: 'Builds upper chest',
         duration: 60,
-        gifUrl: 'https://media1.tenor.com/m/Vd6Qs3RMQRsAAAAC/lifting-weights-working-out.gif',
+        gifUrl: ['https://9to5strength.com/wp-content/uploads/2016/10/low-cable-chest-fly.gif', `https://gymvisual.com/img/p/1/4/4/8/8/14488.gif`],
         instructions: [
-            'Lie on floor with knees bent',
-            'Hold dumbbells at chest level',
-            'Press up, stopping just before full lockout',
-            'Lower dumbbells back down'
+            'Lie on the bench with dumbbells or set cables at low position',
+            'Slowly bring dumbbells or cable handles together above chest',
+            'Hold and feel the contraction in your chest',
+            'Lower dumbbells or cable handles back to starting position with control'
         ],
         difficulty: 'beginner',
         muscleGroup: 'chest',
-        sets: 3,
-        reps: 12
-    },
-    {
-        id: 'chest-cable-flyes',
-        name: 'Cable Flyes',
-        description: 'Chest isolation',
-        duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/TMCtJxQ-XqoAAAAC/incline-chest-fly-cable.gif',
-        instructions: [
-            'Set cables at shoulder height',
-            'Stand in middle, grab handles',
-            'Bring hands together in front',
-            'Return to starting position with control'
-        ],
-        difficulty: 'intermediate',
-        muscleGroup: 'chest',
-        sets: 3,
-        reps: 12
+        sets: 4,
+        reps: 15
     },
     {
         id: 'chest-dips',
-        name: 'Chest Dips',
+        name: 'Decline Dumbbell Press/Decline Barbell Press',
         description: 'Lower chest and triceps',
         duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/LfaWouy1fq8AAAAC/dips-chest-day.gif',
+        gifUrl: [`https://fitnessprogramer.com/wp-content/uploads/2021/02/Decline-Dumbbell-Press.gif`, `https://fitnessprogramer.com/wp-content/uploads/2021/03/Decline-Barbell-Bench-Press.gif`],
         instructions: [
-            'Use dip bars, lean slightly forward',
-            'Lower body by bending elbows',
-            'Push back up to starting position',
-            'Add weight if needed'
+            'Lie on the decline bench with dumbbells or set up barbell on decline bench',
+            'Slowly bring the bar up and together above chest',
+            'Bring it down slowly to chest level around your nipples, holding the stretch at the bottom',
+            'Push the bar back up to starting position with control'
         ],
         difficulty: 'advanced',
         muscleGroup: 'chest',
-        sets: 3,
-        reps: 8
+        sets: 4,
+        reps: 12
     },
     {
-        id: 'chest-push-ups',
-        name: 'Decline Push-ups',
-        description: 'Upper chest activation',
+        id: 'decline-cable-flyes',
+        name: 'Decline Cable Flyes',
+        description: 'Lower chest activation',
         duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/lBF0RCkepZoAAAAC/imfact-jeup.gif',
+        gifUrl: 'https://gymvisual.com/img/p/2/4/7/6/0/24760.gif',
         instructions: [
-            'Feet elevated on bench or platform',
-            'Hands on floor, shoulder-width apart',
-            'Lower chest to ground',
-            'Press back up'
+            'Stand with one leg forward, holding cables in front of you',
+            'Slowly bring the cables down and together in a wide arc, keeping a slight bend in your elbows',
+            'Hold the cables together at the bottom, at height of your belly for a moment, squeezing your chest',
+            'Slowly return to starting position with control, feeling the stretch in your chest at the top'
         ],
         difficulty: 'beginner',
         muscleGroup: 'chest',
-        sets: 3,
-        reps: 10
+        sets: 4,
+        reps: 15
     }
 ];
 

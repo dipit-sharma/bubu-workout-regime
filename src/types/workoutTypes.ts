@@ -21,7 +21,7 @@ export interface Exercise {
     name: string;
     description?: string;
     duration: number; // in seconds
-    gifUrl: string;
+    gifUrl: string | string[];
     instructions?: string[];
     difficulty?: DifficultyLevel;
     muscleGroup?: MuscleGroup;
