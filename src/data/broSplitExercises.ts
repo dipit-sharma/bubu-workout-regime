@@ -117,38 +117,70 @@ const chestExercises: Exercise[] = [
 // === BACK EXERCISES ===
 const backExercises: Exercise[] = [
     {
-        id: 'back-deadlift',
-        name: 'Conventional Deadlift',
-        description: 'Full back and posterior chain',
-        duration: 75,
-        gifUrl: 'https://media1.tenor.com/m/NgtmNzYYAzYAAAAC/deadlift-james-smith.gif',
+        id: 'back-lat-pulldowns',
+        name: 'Lat Pulldowns',
+        description: 'Lats and upper back',
+        duration: 45,
+        gifUrl: 'https://media1.tenor.com/m/AR6A1jMcnE8AAAAC/lat-pull-down.gif',
         instructions: [
-            'Stand with feet hip-width apart',
-            'Grip barbell just outside legs',
-            'Drive through heels, keep back straight',
-            'Pull barbell up along your body'
+            'Sit with chest against pad, if you dont have pad just sit with feet flat on ground and tight arch your back',
+            'Grip the bar wider than shoulders',
+            'Pull bar down to upper chest',
+            'Return to starting position'
         ],
-        difficulty: 'advanced',
+        difficulty: 'beginner',
         muscleGroup: 'back',
-        sets: 3,
-        reps: 6
+        sets: 4,
+        reps: 12
     },
     {
-        id: 'back-barbell-rows',
-        name: 'Barbell Bent-Over Rows',
+        id: 'cable-pullover',
+        name: 'Cable Pullover',
+        description: 'Lats and lower side back',
+        duration: 75,
+        gifUrl: 'https://i.pinimg.com/originals/f3/c6/c6/f3c6c61555639c1bb1a4b2c9c2c799c8.gif',
+        instructions: [
+            'Stand with feet hip-width apart',
+            'Grip the bar with a shoulder-width grip',
+            'Slowly bring the bar down while keeping arc tight and controlled',
+            'Squeeze your lats at the bottom, then slowly return to starting position with control'
+        ],
+        difficulty: 'beginner',
+        muscleGroup: 'back',
+        sets: 4,
+        reps: 15
+    },
+    {
+        id: 'seated-cable-rows',
+        name: 'Seated Cable Rows',
         description: 'Mid and upper back',
         duration: 60,
-        gifUrl: 'https://media1.tenor.com/m/zUJNmi4R3GkAAAAC/prezentace.gif',
+        gifUrl: 'https://gymvisual.com/img/p/1/5/4/9/6/15496.gif',
         instructions: [
-            'Bend at hips, keep back straight',
-            'Grip barbell shoulder-width apart',
-            'Pull barbell to chest',
-            'Lower with control'
+            'Sit perpendicular to the platform, feet on platform',
+            'Grip the bar firmly and pull towards your belly, squeezing your shoulder blades together',
+            'Slowly return to starting position with control, feeling the stretch'
         ],
         difficulty: 'intermediate',
         muscleGroup: 'back',
         sets: 4,
-        reps: 8
+        reps: 12
+    },
+    {
+        id: 'back-face-pulls',
+        name: 'V-Grip Pull Down',
+        description: 'Lower Back',
+        duration: 45,
+        gifUrl: 'https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2025/04/close-neutral-grip-lat-pulldown.gif?resize=700%2C700&ssl=1',
+        instructions: [
+            'Sit while slightly leaning back, feet on platform',
+            'Grip the bar firmly and pull down toward your chest, squeezing your shoulder blades together',
+            'Slowly return to starting position with control, feeling the stretch in your back at the top'
+        ],
+        difficulty: 'beginner',
+        muscleGroup: 'back',
+        sets: 4,
+        reps: 12
     },
     {
         id: 'back-dumbbell-rows',
@@ -164,59 +196,25 @@ const backExercises: Exercise[] = [
         ],
         difficulty: 'intermediate',
         muscleGroup: 'back',
-        sets: 3,
-        reps: 10
-    },
-    {
-        id: 'back-lat-pulldowns',
-        name: 'Lat Pulldowns',
-        description: 'Lats and upper back',
-        duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/AR6A1jMcnE8AAAAC/lat-pull-down.gif',
-        instructions: [
-            'Sit with chest against pad',
-            'Grip the bar wider than shoulders',
-            'Pull bar down to upper chest',
-            'Return to starting position'
-        ],
-        difficulty: 'beginner',
-        muscleGroup: 'back',
-        sets: 3,
+        sets: 4,
         reps: 12
     },
     {
-        id: 'back-face-pulls',
-        name: 'Face Pulls',
-        description: 'Rear delts and upper back',
+        id: 'reverse-grip-pulldown',
+        name: 'Reverse Grip Pulldown',
+        description: 'Lower lats and biceps',
         duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/_U_hRgMJ43cAAAAC/cable-face-pulls.gif',
+        gifUrl: 'https://gymvisual.com/img/p/2/0/2/8/3/20283.gif',
         instructions: [
-            'Set cable at face height',
-            'Grab with wide grip',
-            'Pull toward face, elbows high',
-            'Squeeze shoulder blades together'
-        ],
-        difficulty: 'beginner',
-        muscleGroup: 'back',
-        sets: 3,
-        reps: 15
-    },
-    {
-        id: 'back-inverted-rows',
-        name: 'Inverted Rows',
-        description: 'Back strength with body weight',
-        duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/mUGlCgqdD7oAAAAC/inverted-row.gif',
-        instructions: [
-            'Use low bar, body straight',
-            'Pull chest toward bar',
-            'Squeeze back muscles',
-            'Lower with control'
+            'Same as lat-pulldown but with underhand grip',
+            'Pull bar down to upper chest',
+            'Squeeze lats at bottom',
+            'Return to starting position with control'
         ],
         difficulty: 'intermediate',
         muscleGroup: 'back',
-        sets: 3,
-        reps: 10
+        sets: 4,
+        reps: 12
     }
 ];
 
