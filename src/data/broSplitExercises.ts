@@ -322,8 +322,6 @@ const shoulderExercises: Exercise[] = [
         sets: 3,
         reps: 10
     },
-
-
 ];
 
 // === LEG EXERCISES ===
@@ -503,23 +501,6 @@ const armExercises: Exercise[] = [
         reps: 12
     },
     {
-        id: 'arms-cable-curls',
-        name: 'Cable Curls',
-        description: 'Bicep isolation - constant tension',
-        duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/ObeK-tSJtyQAAAAC/cable-close-grip-curls.gif',
-        instructions: [
-            'Stand facing cable machine',
-            'Grip curl bar with underhand grip',
-            'Curl bar up',
-            'Lower with control'
-        ],
-        difficulty: 'beginner',
-        muscleGroup: 'arms',
-        sets: 3,
-        reps: 12
-    },
-    {
         id: 'arms-hammer-curls',
         name: 'Hammer Curls',
         description: 'Bicep and forearm builder',
@@ -535,7 +516,24 @@ const armExercises: Exercise[] = [
         muscleGroup: 'arms',
         sets: 3,
         reps: 10
-    }
+    },
+    {
+        id: 'arms-tricep-dips',
+        name: 'Tricep Dips',
+        description: 'Tricep isolation - bodyweight exercise',
+        duration: 45,
+        gifUrl: 'https://i.pinimg.com/originals/71/a5/8f/71a58fff86280c49002e0149f8cea3a4.gif',
+        instructions: [
+            'Place hands on bench behind you, fingers facing forward',
+            'Bend elbows to lower body',
+            'Push through palms to lift body back up',
+        ],
+        difficulty: 'beginner',
+        muscleGroup: 'arms',
+        sets: 3,
+        reps: 12
+    },
+
 ];
 
 /**
