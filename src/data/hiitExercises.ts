@@ -28,7 +28,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Burpees',
         description: 'Full body intensive exercise',
         duration: 30,
-        gifUrl: 'https://media1.tenor.com/m/cy3lIf2m-fAAAAAC/kendrick-kendricklamar.gif',
+        gifUrl: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/burpees.gif',
         instructions: [
             'Stand with feet shoulder-width apart',
             'Squat down and place hands on ground',
@@ -145,18 +145,18 @@ const hiitExerciseLibrary: Exercise[] = [
         restTime: 30
     },
     {
-        id: 'hiit-bear-crawl',
-        name: 'Bear Crawl',
-        description: 'Full body cardio and strength',
+        id: 'hiit-crunches',
+        name: 'Crunches',
+        description: 'Core strength',
         duration: 30,
-        gifUrl: 'https://media1.tenor.com/m/W7u3yBYEWD8AAAAC/bear-crawl-exercise.gif',
+        gifUrl: 'https://www.inspireusafoundation.org/wp-content/uploads/2022/01/crunch.gif',
         instructions: [
-            'Start in plank position',
-            'Crawl forward on hands and feet',
-            'Keep hips low and engaged',
-            'Crawl backward to starting position'
+            'Start in supine position, knees bent, feet flat on floor',
+            'Place hands behind head or across chest',
+            'Lift shoulders off the floor, engaging core',
+            'Lower back down with control'
         ],
-        difficulty: 'advanced',
+        difficulty: 'beginner',
         restTime: 30
     },
     {
@@ -164,7 +164,7 @@ const hiitExerciseLibrary: Exercise[] = [
         name: 'Box Jumps',
         description: 'Explosive lower body power',
         duration: 30,
-        gifUrl: 'https://media1.tenor.com/m/rviKVzyEwe8AAAAC/leap-fail-lost-balance.gif',
+        gifUrl: 'https://i.pinimg.com/originals/eb/f3/aa/ebf3aab0ce6bf8651b2c1d66d4f9b517.gif',
         instructions: [
             'Stand facing a sturdy box or bench',
             'Swing arms and jump onto box',
