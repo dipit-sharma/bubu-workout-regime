@@ -84,7 +84,7 @@
 .exercise-gif {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Details Section */
@@ -298,4 +298,3 @@
   color: #831843;
   border: 1px solid #f9a8d4;
 }
-

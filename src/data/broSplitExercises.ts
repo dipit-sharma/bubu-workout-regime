@@ -222,86 +222,53 @@ const backExercises: Exercise[] = [
 const shoulderExercises: Exercise[] = [
     {
         id: 'shoulders-military-press',
-        name: 'Barbell Military Press',
+        name: 'Dumbbell Military Press',
         description: 'Shoulder pressing power',
         duration: 60,
-        gifUrl: 'https://media1.tenor.com/m/CV1FfGVNpdcAAAAC/desenvolvimento-militar.gif',
+        gifUrl: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif',
         instructions: [
-            'Stand with feet shoulder-width apart',
-            'Grip barbell at shoulder height',
-            'Press bar overhead',
-            'Lower barbell back down'
+            'Sit with feet shoulder-width apart',
+            'Grip dumbbells at shoulder height',
+            'Press dumbbells overhead',
+            'Lower dumbbells back down'
         ],
         difficulty: 'intermediate',
         muscleGroup: 'shoulders',
         sets: 4,
-        reps: 8
+        reps: 12
     },
     {
         id: 'shoulders-lateral-raises',
-        name: 'Lateral Dumbbell Raises',
+        name: 'Front Dumbbell Raises',
         description: 'Shoulder width builder',
         duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/-OavRqpxSaEAAAAC/eleva%C3%A7%C3%A3o-lateral.gif',
+        gifUrl: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Alternating-Dumbbell-Front-Raise.gif',
         instructions: [
-            'Stand with dumbbells at sides',
+            'Stand with dumbbells at front of thighs',
             'Keep slight elbow bend',
             'Raise dumbbells to shoulder height',
             'Lower with control'
         ],
         difficulty: 'beginner',
         muscleGroup: 'shoulders',
-        sets: 3,
-        reps: 12
+        sets: 4,
+        reps: 15
     },
     {
-        id: 'shoulders-rear-delt-flies',
-        name: 'Rear Delt Flyes',
-        description: 'Rear shoulder development',
-        duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/wSN6iwABDE8AAAAC/rear-delt-cable-fly-single-arm.gif',
-        instructions: [
-            'Hinge forward slightly',
-            'Hold dumbbells in front of you',
-            'Raise dumbbells to sides',
-            'Squeeze rear delts at top'
-        ],
-        difficulty: 'beginner',
-        muscleGroup: 'shoulders',
-        sets: 3,
-        reps: 12
-    },
-    {
-        id: 'shoulders-arnold-press',
-        name: 'Arnold Press',
-        description: 'All three shoulder heads',
-        duration: 60,
-        gifUrl: 'https://media1.tenor.com/m/ZR-_3Mxq0gYAAAAC/arnold-press.gif',
-        instructions: [
-            'Hold dumbbells at shoulder height, palms facing you',
-            'Press up while rotating palms outward',
-            'Lower back down, rotating palms inward'
-        ],
-        difficulty: 'intermediate',
-        muscleGroup: 'shoulders',
-        sets: 3,
-        reps: 10
-    },
-    {
-        id: 'shoulders-cable-raises',
-        name: 'Cable Lateral Raises',
+        id: 'shoulders-lateral-raises',
+        name: 'Dumbbell Lateral Raises',
         description: 'Shoulders - constant tension',
         duration: 45,
-        gifUrl: 'https://media1.tenor.com/m/sxbft6ZWeK8AAAAC/cable-lateral-raise-single-arm.gif',
+        gifUrl: 'https://gymvisual.com/img/p/1/9/1/5/1/19151.gif',
         instructions: [
-            'Hold cable at side',
-            'Raise cable to shoulder height',
+            'Hold dumbbells at side',
+            'Raise dumbbells to shoulder height',
             'Maintain tension throughout',
             'Lower with control'
         ],
         difficulty: 'beginner',
         muscleGroup: 'shoulders',
-        sets: 3,
+        sets: 4,
         reps: 15
     },
     {
@@ -318,9 +285,45 @@ const shoulderExercises: Exercise[] = [
         ],
         difficulty: 'intermediate',
         muscleGroup: 'shoulders',
+        sets: 4,
+        reps: 10
+    },
+    {
+        id: 'shoulders-rear-delt-flies',
+        name: 'Rear Delt Flyes',
+        description: 'Rear shoulder development',
+        duration: 45,
+        gifUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQUgY77u1WE0ZykJbQnC6tBO_Hi8mW_YfOw&s',
+        instructions: [
+            'Sit firmly on the machine with chest against pad',
+            'Hold the handles with a neutral grip',
+            'Raise handles to sides',
+            'Squeeze rear delts at top'
+        ],
+        difficulty: 'beginner',
+        muscleGroup: 'shoulders',
+        sets: 4,
+        reps: 12
+    },
+    {
+        id: 'shoulders-shrugs',
+        name: 'Dumbbell Shrugs',
+        description: 'Trapezius isolation',
+        duration: 60,
+        gifUrl: 'https://fitnessprogramer.com/wp-content/uploads/2021/04/Dumbbell-Shrug.gif',
+        instructions: [
+            'Stand with dumbbells at sides',
+            'Shrug shoulders up towards ears',
+            'Hold at top for a moment, squeezing traps',
+            'Lower with control'
+        ],
+        difficulty: 'intermediate',
+        muscleGroup: 'shoulders',
         sets: 3,
         reps: 10
-    }
+    },
+
+
 ];
 
 // === LEG EXERCISES ===
